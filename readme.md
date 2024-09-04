@@ -14,7 +14,8 @@ Ensuite, il va remplir le captcha à sa place et tester des combinaisons de mot 
 ```
 npm i
 ```
-2) Démarrage du programme
+2) Remplir le dictionnaire de mot de passe `dictionary.txt` avec un mot de passe valide pour tester la connexion
+3) Démarrage du programme
 ```
 npm start
 ```
