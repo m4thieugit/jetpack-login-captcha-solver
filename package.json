@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "axios": "^1.7.7",
+    "cheerio": "^1.0.0",
+    "puppeteer": "^23.2.2",
+    "tough-cookie": "^4.1.4"
+  },
+  "name": "jetpack-login-captcha-solver",
+  "version": "1.0.0",
+  "description": "Un module qui permet de se connecter à un site WordPress en passant le captcha de Jetpack",
+  "main": "start.js",
+  "scripts": {
+    "test": "node start",
+    "start": "node start"
+  },
+  "keywords": [
+    "wordpress",
+    "captcha",
+    "solver",
+    "jetpack"
+  ],
+  "author": "m4thieugit",
+  "license": "MIT"
+}
