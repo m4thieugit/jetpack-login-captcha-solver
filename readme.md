@@ -1,4 +1,4 @@
-# Jetpack Login Captcha Solver
+# Jetpack Login Captcha Solver (CWE-804: Guessable CAPTCHA)
 
 Ceci est un outil qui a pour but de prouver la vulnérabilité du captcha de Jetpack. Merci de ne pas utiliser cet outil à d'autres fins !
 
