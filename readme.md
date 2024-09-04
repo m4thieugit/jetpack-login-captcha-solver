@@ -6,7 +6,7 @@ Ceci est un outil qui a pour but de prouver la vulnérabilité du captcha de Jet
 
 Le programme va demander le domaine, le slug de la page de connexion, et l'identifiant de l'utilisateur.
 
-Ensuite, il va remplir le captcha à sa place et tester des combinaisons de mot de passe pour montrer qu'on brutaliser un site facilement.
+Ensuite, il va remplir le captcha à sa place et tester des combinaisons de mot de passe pour montrer qu'on peut brutaliser un site facilement.
 
 ## Utilisation
 
@@ -19,3 +19,10 @@ npm i
 ```
 npm start
 ```
+
+
+### Exemple de remplissage
+
+- Domaine : mon-domaine.fr
+- Page de connexion : wp-admin (par défaut)
+- ID d'utilisateur : admin
