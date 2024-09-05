@@ -33,7 +33,6 @@ module.exports = class JetpackLoginCaptchaSolver {
      * Calcule le résultat d'une expression mathématique.
      * @param {string} expression - L'expression mathématique à évaluer.
      * @returns {number} - Le résultat de l'évaluation.
-     * @throws Will throw an error if the expression cannot be evaluated.
      */
     calculate(expression) {
         try {
@@ -45,10 +44,10 @@ module.exports = class JetpackLoginCaptchaSolver {
 
     /**
      * Extrait la solution du CAPTCHA et soumet le formulaire.
-     * @returns {string} - Une promesse qui se résout avec le bon mot de passe si le formulaire est soumis avec succès.
+     * @returns {string} - Retourne le bon mot de passe si le formulaire est soumis avec succès.
      */
     async submit() {
-        const browser = await puppeteer.launch({ headless: false }); // ou false si vous souhaitez voir le navigateur
+        const browser = await puppeteer.launch({ headless: false });
         const page = await browser.newPage();
         
         try {
@@ -58,7 +57,7 @@ module.exports = class JetpackLoginCaptchaSolver {
             const userAgent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36';
 
             await page.setUserAgent(userAgent);
-            await page.setCookie(...this.cookieJar.getCookiesSync(`https://${this.domain}`)); // Définir les cookies si présents
+            await page.setCookie(...this.cookieJar.getCookiesSync(`https://${this.domain}`));
 
             await page.goto(`https://${this.domain}/${this.loginEndpoint}?redirect_to=https%3A%2F%2F${this.domain}%2F${this.adminEndpoint}%2F&reauth=1`, {
                 waitUntil: 'networkidle2'
